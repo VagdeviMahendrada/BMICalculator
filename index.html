@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <b><title>BMI Calculator</title></b>
+ 
+  
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Times New Roman', Times, serif;
+    }
+ 
+    body {
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      animation: fadeIn 1.5s ease-in-out;
+      
+    }
+ 
+    body::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      background: url('https://assets.clevelandclinic.org/transform/LargeFeatureImage/ed667597-5baf-4fcc-a5f9-f9d7cdf3352e/MeasuringBMI-1293501993-770x533-1_jpg') no-repeat center center/cover;
+      filter: blur(2px) brightness(0.7);
+      z-index: -2;
+    }
+ 
+    
+ 
+    header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background-color: rgba(255, 255, 255, 0.1);
+      padding: 15px 30px;
+      backdrop-filter: blur(1px);
+      display: flex;
+      justify-content: space-between;
+      text-align: center;
+      z-index: 10;
+      animation: fadeDown 1s ease;
+    }
+ 
+    header h1 {
+      font-size: 1.5rem;
+      font-family: 'Times New Roman', Times, serif;
+      color:white;
+      text-shadow: 3px 3px 3px olive;
+      background-color:olive;
+      padding:8px;
+      border-radius:20px;
+      animation: slideDown 1s ease-out;
+    }
+ 
+    header a {
+      margin-left: 20px;
+      text-decoration: none;
+      font-family: 'Times New Roman', Times, serif;
+      color: white;
+      font-weight: bold;
+      background-color: olive;
+      padding: 8px 14px;
+      border-radius: 20px;
+      transition: background 0.3s ease, transform 0.3s ease;
+    }
+ 
+    
+    .card {
+      background-color: whitesmoke;
+      padding: 40px;
+      margin-top: 120px;
+      width: 90%;
+      max-width: 500px;
+      border-radius: 25px;
+      box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+      text-align: center;
+      animation: popUp 1s ease;
+    }
+ 
+    .card h2 {
+      font-size: 2rem;
+      font-family: 'Times New Roman', Times, serif;
+      color: olive;
+      margin-bottom: 15px;
+    }
+ 
+    .card p {
+      font-size: 1.1rem;
+      font-family: 'Times New Roman', Times, serif;
+      color: #444;
+      margin-bottom: 30px;
+    }
+ 
+    .card button {
+      background-color: olive;
+      font-family: 'Times New Roman', Times, serif;
+      color: white;
+      border: none;
+      padding: 12px 25px;
+      font-size: 1rem;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: background 0.3s ease, transform 0.3s ease;
+    }
+ 
+    .card button:hover {
+      background-color: olive;
+      transform: translateY(-3px);
+    }
+ 
+    .card a {
+      display: inline-block;
+      margin-top: 20px;
+      color: olive;
+      font-weight: bold;
+      text-decoration: none;
+    }
+ 
+  
+    footer {
+      font-family: 'Times New Roman', Times, serif;
+      margin-top: 40px;
+      color: whitesmoke;
+      font-size: 0.9rem;
+      text-shadow: 1px 1px #1e3c72;
+      animation: fadeUp 1.2s ease;
+    }
+ 
+    /* Animations */
+    @keyframes fadeDown {
+      from { opacity: 0; transform: translateY(-50px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+ 
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(50px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+ 
+    @keyframes popUp {
+      from { opacity: 0; transform: scale(0.8); }
+      to { opacity: 1; transform: scale(1); }
+    }
+ 
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+  </style>
+</head>
+ 
+<body>
+  
+  <header>
+    <h1 > BMI CALCULATOR</h1>
+    <div>
+      <a href="about.html"> About</a>
+      <a href="resources.html"> Resources</a>
+    </div>
+  </header>
+ 
+  <div class="card">
+    <h2>Know Your BMI. Know Yourself.</h2>
+    <p>Body Mass Index helps you understand if your weight falls within a healthy range. Let's check yours.</p>
+    
+      <a href="bmicalculator.html"><button type="button">Start Your BMI Check</button></a>
+    
+  </div>
+ 
+  <footer>
+    <p style="color:olive">@BY TEAM TEST CASE CLOSED!!!!</p>
+  </footer>
+  
+</body>
+</html>

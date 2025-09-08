@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About - BMI Calculator</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Times New Roman', Times, serif;
+    }
+
+    body {
+      position: relative;
+      min-height: 100vh;
+      background: url('https://assets.clevelandclinic.org/transform/LargeFeatureImage/ed667597-5baf-4fcc-a5f9-f9d7cdf3352e/MeasuringBMI-1293501993-770x533-1_jpg') no-repeat center center/cover;
+      filter: brightness(0.9);
+      padding-top: 80px;
+      padding-bottom: 40px;
+      animation: fadeIn 1.5s ease-in-out;
+      top: 0;
+      width: 100%;
+      background-color: rgba(255, 255, 255, 0.1);
+      padding: 15px 30px;
+      backdrop-filter: blur(2px);
+      text-align: center;
+      z-index: 10;
+      animation: fadeDown 1s ease;
+    }
+
+    header h1 {
+      font-size: 2rem;
+      color: white;
+      text-shadow: 2px 2px 4px olive;
+      background-color: olive;
+      padding: 10px 20px;
+      border-radius: 20px;
+      display: inline-block;
+      animation: slideDown 1s ease-out;
+    }
+
+    main div {
+      background-color: rgba(255, 255, 255, 0.85);
+      padding: 30px;
+      margin: 20px auto;
+      max-width: 800px;
+      border-radius: 20px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+      animation: popUp 1s ease;
+    }
+
+    main p {
+      font-size: 1.1rem;
+      color: #333;
+      margin-bottom: 20px;
+      line-height: 1.6;
+    }
+
+    footer {
+      text-align: center;
+      color: whitesmoke;
+      font-size: 0.9rem;
+      text-shadow: 1px 1px #1e3c72;
+      animation: fadeUp 1.2s ease;
+      padding-top: 35px;
+    }
+
+    @keyframes fadeDown {
+      from { opacity: 0; transform: translateY(-50px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(50px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes popUp {
+      from { opacity: 0; transform: scale(0.8); }
+      to { opacity: 1; transform: scale(1); }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+  </style>
+</head>
+
+<body>
+  <header style="padding-bottom: 50px;">
+    <h1 style="text-align: center;">About the BMI Calculator</h1>
+  </header>
+
+  <main>
+    <div style="max-width: 800px; margin: 0 auto; padding: 20px;">
+      <p>
+        The Body Mass Index (BMI) Calculator is a simple tool designed to help you understand if your current weight falls within a healthy range based on your height and weight. It's a quick way to gauge whether you're underweight, at a healthy weight, overweight, or obese.
+      </p>
+
+      <p>
+        BMI is widely used by health professionals as an initial screening method. While it doesn’t measure body fat directly, it provides a reliable indicator for most people and can help raise awareness about possible health risks.
+      </p>
+
+      <p>
+        Our calculator takes your height and weight as input and instantly displays your BMI score along with a category interpretation. Whether you're tracking your fitness goals or simply curious, this tool makes it easy and accessible.
+      </p>
+    </div>
+  </main>
+
+  <footer>
+    <p style="text-align: center; color:olive">@BY TEAM TEST CASE CLOSED!!!!</p>
+  </footer>
+</body>
+</html>

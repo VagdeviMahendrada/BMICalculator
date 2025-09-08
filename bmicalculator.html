@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>BMI Calculator</title>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+ 
+    body {
+      font-family: 'Quicksand', sans-serif;
+      background: url('https://assets.clevelandclinic.org/transform/LargeFeatureImage/ed667597-5baf-4fcc-a5f9-f9d7cdf3352e/MeasuringBMI-1293501993-770x533-1_jpg') no-repeat center center/cover;
+      color: #333;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      
+    }
+ 
+    .card {
+      backdrop-filter: blur(8px);
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 12px 24px rgba(0,0,0,0.15);
+      width: 90%;
+      max-width: 500px;
+      animation: zoomIn 1s ease;
+    }
+ 
+    @keyframes zoomIn {
+      from { transform: scale(0.8); opacity: 0; }
+      to { transform: scale(1); opacity: 1; }
+    }
+ 
+    
+    .card label {
+      display: block;
+      margin-top: 20px;
+      font-weight: 700;
+    }
+ 
+    .card input, .card select {
+      width: 100%;
+      padding: 12px;
+      border: 2px solid #f8b500;
+      border-radius: 8px;
+      font-size: 1em;
+      margin-top: 8px;
+      transition: 0.3s;
+    }
+ 
+    .card input:focus, .card select:focus {
+      outline: none;
+      border-color: #e67e22;
+      box-shadow: 0 0 8px #f8b50060;
+    }
+ 
+    .card button {
+      margin-top: 30px;
+      padding: 14px;
+      width: 100%;
+      font-size: 1em;
+      border: none;
+      border-radius: 30px;
+      background: linear-gradient(45deg, #f39c12, #e67e22);
+      color: white;
+      cursor: pointer;
+      transition:  0.3s ease;
+    }
+ 
+    .card button:hover {
+      background: linear-gradient(45deg, #e67e22, #f39c12);
+    }
+ 
+    .result {
+      margin-top: 25px;
+      font-size: 1.1em;
+      text-align: center;
+    }
+ 
+    .category {
+      font-weight: bold;
+      color: #e67e22;
+    }
+ 
+    @media(max-width: 600px) {
+      .card {
+        padding: 30px 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h2>🧮 BMI Calculator</h2>
+ 
+    <label for="heightValue">Height</label>
+    <input type="number" id="heightValue" placeholder="Enter your height" />
+    <select id="heightUnit">
+      <option value="cm">Centimeters (cm)</option>
+      <option value="inches">Inches</option>
+      <option value="feet">Feet</option>
+    </select>
+ 
+    <label for="weightValue">Weight</label>
+    <input type="number" id="weightValue" placeholder="Enter your weight" />
+    <select id="weightUnit">
+      <option value="kg">Kilograms (kg)</option>
+      <option value="lbs">Pounds</option>
+    </select>
+ 
+    <button onclick="calculateBMI()">Calculate Now</button>
+ 
+    <div class="result" id="bmiResult"></div>
+  </div>
+ 
+  <script src="script.js"></script>
+</body>
+</html>
